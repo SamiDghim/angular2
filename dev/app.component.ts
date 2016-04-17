@@ -1,16 +1,27 @@
 import {Component} from 'angular2/core';
+import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {RouteConfig} from 'angular2/router';
 import {Component1Component} from './components/component1.component';
 import {Component2Component} from './components/component2.component';
-import {RouterConfig} from 'angular2/router';
+
 @Component({
     selector: 'my-app',
     template: `
-        <p>Hello World!!</p>
-        <component-2></component-2>
-        <component-1></component-1>
+        <header>
+          <ul>
+            <li><a [routerLink]="['Component1']">component-1</a></li>
+            <li><a [routerLink]="['Component2']">component-2</a></li>
+          </ul>
+        </header>
+        <router-outlet></router-outlet>
     `,
-    directives: [Component2Component, Component1Component]
+    directives: [ ROUTER_DIRECTIVES, Component1Component, Component2Component ]
 })
+
+@RouteConfig([
+  {path: '/component-1', name: 'Component1', component: Component1Component, useAsDefault: true  }
+  {path: '/component-2', name: 'Component2', component: Component2Component}
+])
 
 export class AppComponent {
 
