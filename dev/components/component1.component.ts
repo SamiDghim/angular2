@@ -1,7 +1,5 @@
-import {Component} from 'angular2/core':
-import {OnInit} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
-import {RouteConfig} from 'angular2/router';
+import {Component,OnInit} from 'angular2/core':
+import {RouteParams,RouteConfig} from 'angular2/router';
 
 @Component({
     selector: 'component-1',
