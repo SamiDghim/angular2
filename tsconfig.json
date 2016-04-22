@@ -6,15 +6,17 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
+    "removeComments": true,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "../app"
   },
   "filesGlob": [
     "./dev/**/*.ts",
     "!./node_modules/**/*.ts"
   ],
   "exclude": [
+    "bower_component",
     "node_modules",
     "typings/main",
     "typings/main.d.ts"
@@ -26,8 +28,8 @@
     "./dev/app.component.ts",
     "./dev/boot.ts",
     "./dev/components/component1.component.ts",
-    "./dev/components/component2.component.ts",
+    "./dev/components/books.component.ts",
     "./dev/services/http.service.ts",
-    "./dev/unit-tests/1st.spec.ts"
+    "./dev/unit-testing/app.spec.ts"
   ]
 }

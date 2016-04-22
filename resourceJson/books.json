@@ -1,35 +1,64 @@
 [
   {
-    "title": "Book-1"
+    "title": "Book-1",
+    "author": "charles darwin",
+    "price": "10$",
+    "ratings":  "1"
   },
   {
-    "title": "Book-2"
+    "title": "Book-2",
+    "author": "charles darwin",
+    "price": "20$",
+    "ratings":  "1"
+
   },
   {
-    "title": "Book-3"
+    "title": "Book-3",
+    "author": "charles darwin",
+    "price": "30$",
+    "ratings":  "1"
+
   },
   {
-    "title": "Book-4"
+    "title": "Book-4",
+    "author": "charles darwin",
+    "price": "40$",
+    "ratings":  "1"
+
   },
   {
-    "title": "Book-5"
+    "title": "Book-5",
+    "author": "charles darwin",
+    "price": "50$",
+    "ratings":  "1"
+
   },
   {
-    "title": "Book-6"
+    "title": "Book-6",
+    "author": "charles darwin",
+    "price": "60$",
+    "ratings":  "1"
+
   },
   {
-    "title": "Book-7"
+    "title": "Book-7",
+    "author": "charles darwin",
+    "price": "70$",
+    "ratings":  "1"
+
   },
   {
-    "title": "Book-8"
+    "title": "Book-8",
+    "author": "charles darwin",
+    "price": "20$",
+    "ratings":  "1"
+
   },
   {
-    "title": "Book-9"
-  },
-  {
-    "title": "Book-10"
-  },
-  {
-    "title": "Book-11"
+    "title": "Book-9",
+    "author": "charles darwin",
+    "price": "80$",
+    "ratings":  "1"
+
   }
 ]

@@ -1,46 +1,22 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {RouteConfig,ROUTER_DIRECTIVES} from 'angular2/router';
 import {Component1Component} from './components/component1.component';
-import {Component2Component} from './components/component2.component';
-import {HttpService} from "./services/http.service";
+import {BooksComponent} from './components/books.component';
+import {Component3Component} from './components/component3.component';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'templates/app.tpl.html' ,
-    directives: [ ROUTER_DIRECTIVES, Component1Component, Component2Component ]
+    directives: [ ROUTER_DIRECTIVES, Component1Component, BooksComponent, Component3Component ]
 })
 
 @RouteConfig([
-  {path: '/component-1/:source', name: 'Component1', component: Component1Component },
-  {path: '/component-2', name: 'Component2', component: Component2Component }
+
+  {path: '/component-1', name: 'Component1', component: Component1Component, useAsDefault: true },
+  {path: '/books',       name: 'Books',      component: BooksComponent },
+  {path: '/component-3', name: 'Component3', component: Component3Component }
 ])
 
-export class AppComponent implements OnInit{
-  public foods_error:Boolean = false;
-  public foods;
-  public books;
-  public movies;
+export class AppComponent {
 
-  constructor(private _httpService: HttpService) { }
-
-  ngOnInit():any {
-    this.getFoods();
-    this.getBooksAndMovies();
-  }
-
-  getFoods() {
-    this._httpService.getFoods().subscribe(
-      data => { this.foods = data},
-      err => { this.foods_error = true }
-    );
-  }
-
-  getBooksAndMovies() {
-    this._httpService.getBooksAndMovies().subscribe(
-      data => {
-        this.books = data[0]
-        this.movies = data[1]
-      }
-    );
-  }
 }

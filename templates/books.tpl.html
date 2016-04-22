@@ -1,0 +1,26 @@
+<div class="title">Get data from static resource :</div>
+
+<div class="panel panel-primary filterable">
+    <div class="panel-heading">
+        <h3 class="panel-title">Books</h3>
+    </div>
+    <table class="table">
+        <thead>
+            <tr class="filters">
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Ratings</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="#book of books">
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.ratings}}</td>
+            <td></td>
+          </tr>
+        </tbody>
+    </table>
+</div>

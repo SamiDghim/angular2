@@ -1,4 +1,4 @@
-import {Component,OnInit} from 'angular2/core':
+import {Component,OnInit} from 'angular2/core';
 import {RouteParams,RouteConfig} from 'angular2/router';
 
 @Component({
@@ -9,12 +9,9 @@ import {RouteParams,RouteConfig} from 'angular2/router';
 
 
 export class Component1Component implements OnInit{
-  source: string;
-  optional: string;
-  constructor(private _routeParams: RouteParams){}
+
+  constructor(){}
 
   ngOnInit(){
-    this.source = this._routeParams.get('source');
-    this.optional = this._routeParams.get('optional');
   }
 }
